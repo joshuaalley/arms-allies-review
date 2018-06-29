@@ -123,43 +123,85 @@ The most salient example of a problem with scope conditions is the debate over f
 If smaller states are more likely to use alliances as a source of security, rather than to increase their foreign policy autonomy \citep{Morrow1991}, then autonomy-seeking major powers have less incentive to substitute alliances for arms. Other theories beyond the economic theory of alliances must consider these differences between major and minor powers. If the relationship between arms and allies is fundamentally different for major powers, studies of major power alliances will only tell part of the story.  
 
 
-The theoretical and empirical importance of scope conditions points to the other major problem in scholarship on the arms-alliances tradeoff--- many early empirical results have limited viability. Absent reliable empirical results, assessing the relative value of different theories is impossible. Despite the general claims in different theories, most studies of the arms-allies tradeoff provide poor evidence for their claims. Many researchers use limited samples of states or alliances, or fail to account for critical empirical issues.   
+The theoretical and empirical importance of scope conditions points to the other major problem in scholarship on the arms-alliances tradeoff--- many early empirical results have limited viability. Absent reliable empirical results, assessing the relative value of different theories is impossible. Despite the general claims in different theories, most studies of the arms-allies tradeoff provide poor evidence for their claims. Many researchers use limited samples of states or alliances, or fail to account for critical empirical problems.   
 
 
 \section*{Empirical Challenges}
 
-To the credit of prior researchers, many of whom were working with limited methodological tools, estimating the association between arms and alliances is difficult. The exact observable implications of an arms-alliances tradeoff are unclear, beyond a sense that marginal changes are most meaningful \citep{Morrow2000, Starr2000}. Any research design must consider contextual factors that might drive simultaneous changes in arms and allies, measurement challenges, and scope conditions. The standard dependent variable is also challenging. National military spending is highly autocorrelated, and the skewed distribution of the variable can present substantial challenges for conventional regression estimators. 
+Estimating the association between arms and alliances is difficult. Many theories do not specify clear observable implications of an arms-alliances tradeoff, beyond some advice to focus on marginal changes meaningful \citep{Morrow2000, Starr2000}. The following section summarizes the empirical strategies of the 26 studies of the arms-allies tradeoff.
 
-Few studies estimate the general association between arms and alliances. Only seven used military expenditures as the dependent variable, and accounted for the presence of multiple alliances. Four of these seven models are untrustworthy, as they fail to control for key correlates of spending and use limited samples. 
+Any research design must consider causes of simultaneous change in arms and allies, measurement, and scope conditions. Besides these theoretical aspects of research design, military spending is a challenging dependent variable. National military spending is highly autocorrelated, and its skewed distribution is problematic for conventional regression estimators. 
 
-For example, \citet{MorganPalmer2003} regress changes in military expenditure on indicators of state and alliance capabilities in a sample of the years after a state's alliance portfolio changed. Other studies focus only on great power alliances \citep{ConybeareSandler1990, Conybeare1994, Diehl1994, MostSiverson1987}, with little attention to possible differences in how these states make defense allocations. While great powers face salient security threats, a better empirical approach is to control for differences in threat. 
+Few studies estimate a general model of how alliances affect arms. Only seven used military expenditures as the dependent variable, and accounted for the presence of multiple alliances. Four of these seven models are untrustworthy, as they do not control for key correlates of spending and use limited samples. 
 
-The other 17 studies look at dynamics within specific alliances. These studies can address alliance-level variation in much more detail, looking at specific changes in the political context or nature of the alliance itself. Seven of these studies examine NATO or the Warsaw Pact only. Much of the work on specific alliances tests whether larger members have a higher defense burden, in accordance with the primary prediction of the economic theory of alliances. Early studies of free-riding in specific alliances rely on correlation coefficients or regressions with 20 or fewer observations \citep{OlsonZeckhauser1966, Starr1974, Reisinger1983, Siroky2012}, where there is a high risk of spurious results from omitted variable bias or outliers. The focus on specific alliances is often driven by data availability--- NATO members and great powers have more data on military spending. 
+For example, \citet{MorganPalmer2003} regress changes in military expenditure on indicators of state and alliance capabilities in a sample of the years after a state's alliance portfolio changed. Their model includes no control variables, raising the risk of omitted variable bias. Other studies focus only on great power alliances \citep{ConybeareSandler1990, Conybeare1994, Diehl1994, MostSiverson1987}, with little attention to possible differences in how these states make defense allocations. While great powers face salient security threats, a better empirical approach is to control for differences in threat. 
 
-Most studies, whether specific or general, ignore autocorrelation in the data-generating process of military spending. Four of the 24 studies use an estimator or specification that can address autocorrelation in military spending. Four others use a differenced dependent variable. 
+The other 17 studies examine dynamics within specific alliances. These research designs address alliance-level variation in more detail, looking at specific changes in the political context or nature of the alliance itself. Seven of these studies examine NATO or the Warsaw Pact only. Much of the work on specific alliances tests whether larger members have a higher defense burden, in accordance with the primary prediction of the economic theory of alliances. Early studies of free-riding in specific alliances rely on correlation coefficients or regressions with 20 or fewer observations \citep{OlsonZeckhauser1966, Starr1974, Reisinger1983, Siroky2012}, where there is a high risk of spurious results from omitted variable bias or outliers. The focus on specific alliances is driven by data availability--- NATO members and great powers have more data on military spending. 
 
-The best general model of the arms alliances tradeoff is the work of \citet{DigiuseppePoast2016}, who find that substitution of alliances for arms is conditional on the credibility of the alliance. They argue that that democracies make more credible commitments, and estimate regression models of the association between defense pacts with a democracy and the natural log of military spending, using a lagged dependent variable to account for autocorrelation. All told, the research design in this paper is a marked improvement over prior work, though it offers a crude take on intra-alliance variation.  
+Most studies, whether specific or general, ignore autocorrelation in the data-generating process of military spending. Due a ``ratchet effect'' or bureaucratic difficulties in changing spending allocations, past military spending is an excellent predictor of current spending. Therefore time-series observations within states are not independent, but many studies treat these observations as independent. Four of the 26 studies use an estimator or specification that incorporates autocorrelation in military spending. Four others use a differenced dependent variable. 
 
-Some models of specific alliance dynamics provide more detailed estimates of how membership in a particular treaty affects defense spending. In these studies, researchers can leverage specific knowledge to identify omitted variables and critical contextual factors. \citet{PluemperNeumayer2015}'s quasi-spatial model of how NATO members respond to US and Soviet spending is the best evidence of free-riding by NATO members. \citet{Sorokin1994} takes a similar approach to estimating the responses of four diverse states to the military spending of a key ally with a two-stage least squares GLS estimator. 
+Even when accounting autocorrelation, the standard linear regression estimator may be inefficient. When the regression residuals are not normally distributed, OLS is still unbiased, but it is not the minimum variance estimator \citep{RaineyBaissa2017}. As \autoref{fig:milex_histogram} shows, military spending from 1950-2001 is not normally distributed, even after applying a log transformation. As a result, regression models that use this data will likely have skewed residuals as well, making their estimates inefficient. 
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.95\textwidth]{milex_histogram.png}
+	\caption{Distribution of Annual Military Spending by all States: 1950-2001}
+	\label{fig:milex_histogram}
+\end{figure}
+
+Given all of these concerns, the best model of the arms alliances tradeoff is the work of \citet{DigiuseppePoast2016}, who find that substitution of alliances for arms is conditional on the credibility of the alliance. They argue that that democracies make more credible commitments, and estimate regression models of the association between defense pacts with a democracy and the natural log of military spending, using a lagged dependent variable to account for autocorrelation. All told, the research design in this paper is a marked improvement over prior work.\footnote{While their regression estimator does not account for heavy tails in the dependent variable, the results are robust to using a robust regression estimator.} 
+
+The major shortcoming of DiGiuseppe and Poast's research design is a mismatch between the theory and empirical test. Their theory emphasizes differences in alliances, but then examines differences between states. The binary independent variable captures the presence of a defense pact with a democracy, and coupled with a control for defense pacts with non-democracies, they compare states that have a defense pact with a democracy to states with no defense pacts. DiGiusseppe and Poast's research design is the standard approach in general studies of how alliance membership impacts military spending, which provides minimal detail about differences between alliances.
+
+Unlike general research designs, models of specific alliance dynamics can include more detail about treaty and its members. In these studies, researchers leverage case-specific knowledge to identify critical contextual factors, but focusing on a few alliances limits their generalizability. \citet{PluemperNeumayer2015}'s quasi-spatial model of how NATO members respond to US and Soviet spending is the best evidence of free-riding by NATO members. \citet{Sorokin1994} takes a similar approach to estimating the responses of four states to the military spending of a key ally with a two-stage least squares GLS estimator.
+
+Estimating how alliance membership affects domestic military spending will require researchers to combine the scope of general studies with greater detail about each alliance. Otherwise, differences between alliances will generate omitted variable bias. Although there are few reliable models of how alliance membership affects domestic arms, there are few models of the relationship between the cost of arms and alliance formation. 
+
+\subsection*{Arms Costs and Alliance Formation}
+
+Only two studies consider the other side of the arms-alliances tradeoff--- how the opportunity costs of military spending affect alliance formation. \citet{Kimball2010, AllenDigiuseppe2013} both use panel data, and expect that states with high social demand or costs of sovereign borrowing, will be more likely to form alliances. While these models find the expected positive correlation between the key independent variable and a binary indicator of whether a state joined an alliance in a given year, neither model fits the data well.\footnote{Fit depends on the ability of the model to correctly predict the depdendent variable. Allen and DiGiuseppe's model fits better than Kimball's model.} 
+
+Both models assign low predicted probabilities of alliance formation to observations where formation occurred, as shown by the separation plots in \autoref{fig:formation sep_plot}. Poor model fit casts doubt on the validity of inferences about the covariates \citep{Montgomeryetal2012, Muchlinskietal2015}. Even in state-year panel data, alliance formation is rare, making it more difficult to predict.\footnote{Only 4\% of Kimball's observations and 7\% of Allen and DiGiuseppe's observations see alliance formation.} 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.90\textwidth]{formation sep_plot.png}
+	\caption{Separation plot of primary models from Kimball 2010 and Allen and DiGiuseppe 2013. A separation plot summarizes model fit by ordering observations according to the predicted probability assigned by the model. Dark lines mark observations where the observed value of the dependent variable is one. Better fitting models assign higher predicted probabilities to those observations, which will be reflected by clustering on the right-hand side of the plot. Greater dispersion of the dark lines indicates that the model does a poor job predicting the outcome of interest.}
+	\label{fig:formation sep_plot}
+\end{figure}
+
+Besides poor model fit, these two research designs indirectly test the logic of substitution. The key independent variable differentiates between states with high opportunity costs of military spending. But the nature of military spending is shifting over time due to increases in the price and complexity of conventional weapons \citep{Bitzinger2003}. Therefore, the marginal utility of a dollar of military spending is not constant over time. Instead, one dollar purchases smaller quantities of military capability.
+  
+Using panel data with a binary indicator of whether a state formed an alliance in a particular year ignores heterogeneity among alliances. Alliances make different promises, and provide different amounts of capability to support those promises. A defense pact with the United States provides more security than a neutrality pact with Senegal, for instance. The consequential choice of alliance types and partners is neglected by these theories and research designs.  
 
 
+\subsection*{Overall Empirical Assessment}
 
-\section*{Overall Assessment}
+If theory testing depends on the accumulation of evidence, we have accumulated little reliable evidence. What we know about the arms-alliance tradeoff depends on two general and three alliance-specific studies. The other 21 research designs are narrow, flawed, or both.  
 
-What can we conclude about our understanding of the arms-alliances tradeoff? First, if theory testing depends on the accumulation of evidence, we have accumulated little reliable evidence. What we reliably know about the arms-alliance tradeoff depends on 4 general studies and 3 or 4 alliance-specific studies. 
+The core empirical challenge is that the arms-alliances tradeoff contains two distinct levels of analysis. International organizations such as alliances are a separate level of analysis from states \citep{Mattes2012, Chibaetal2015}. Because their outcome of interest is usually at the state level, scholars have relied on crude summaries of the overall alliance portfolio, or only estimated the impact of a few alliances. State-level dummy indicators of alliance membership are the most common independent variable, but this measurement creates substantial problems. 
 
-The detail in specific studies of alliances points to a major challenge for future research--- accounting for the different levels of analysis in the arms-alliances tradeoff and variation across those levels. International organizations such as alliances are a separate level of analysis from states \citep{Mattes2012, Chibaetal2015}. Because the outcome of interest is usually at the state level, scholars have relied on crude summaries of the overall alliance portfolio \citep{Conybeare1992}, or only estimated the effect of a few alliances \citep{OnealWhatley1996}. 
+Using state-level dummy variables in general models restricts the ability of researchers to account for other differences in alliances. Because they average out between-alliance variation, state-level membership proxies remove critical details. For instance, democracies tend to form more limited alliance commitments \citep{Chibaetal2015}, so democratic membership and conditionality are correlated. Other factors such as superpower membership, institutionalization, military aid are also correlated with key alliance conditions. Currently, these alliance characteristics are omitted variables, which could affect our estimates of how alliance membership affects military spending. 
 
-% Neither set of theories does a good job thinking about the general international context. 
+Empirical work on the arms-alliances tradeoff faces similar challenges to other work on the consequences of membership in international organizations. Selection bias is a ubiquitous concern in that literature \citep{Chaudoinetal2016}, but is completely neglected in past research designs. And while theory acknowledges simultaneity between arms and alliances, only one paper (\citet{DigiuseppePoast2016}) uses a simultaneous model. As with theories of the arms-allies tradeoff, there is ample need for improvement in research design.
 
-% Role of alliance spending/operationalization of membership
+
+\section*{Conclusions}
+
+Given theory and empirical evidence, what can we conclude about our understanding of the arms-alliances tradeoff? First, the association between arms and alliances is probably conditional. Research designs must reflect this, and carefully consider the problems inherent in moving between different levels of analysis. 
+
+% abandon free-riding, focus on expenditures-alliance connection, not defense burden
+
+% Reliability and compliance \citep{BerkemeierFuhrmann2018}
+
+% Role of alliance spending/operationalization of membership. Combining detail- alliance spec estimates and general relationships
 
 % Can also consider implications of costs in forming alliances for arms- no one has really done that yet, and it is the inverse of the substitution logic. 
 
 
 
-%\bibliography{C:/Users/jkalley14/Dropbox/Research/MasterBibliography}  
-\bibliography{C:/Users/Josh/Dropbox/Research/MasterBibliography} 
+\bibliography{C:/Users/jkalley14/Dropbox/Research/MasterBibliography}  
+%\bibliography{C:/Users/Josh/Dropbox/Research/MasterBibliography} 
 
 
 
