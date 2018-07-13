@@ -71,10 +71,11 @@ nordhaus.data <- read_dta("replications/Nordhaus et al 2012 data.dta")
 defense.data <- mutate(nordhaus.data,
                             ccode = STATE,
                             year = YEAR,
+                            pr.conf = PN6,
                             gdp = exp(LNRGDP),
                             milex = exp(LMILEX),
                             def.burden = milex / gdp) %>%
-                      select(ccode, year, gdp, milex, def.burden)
+                      select(ccode, year, gdp, milex, def.burden, pr.conf)
 
 # Merge expenditures and GDP data with kimball and A&DG data
 # Create separate datasets because the samples are quite disparate with limited temporal coverage of Nordhaus data
