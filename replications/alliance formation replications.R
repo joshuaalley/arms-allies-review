@@ -139,7 +139,7 @@ coeftest(kimball.defb, vcov = vcovHC(kimball.defb, type="HC1")) # Robust standar
 
 # Use military personnel as share of population as alternative defense burden measure
 kimball.pers.defb <- glm(AF_new ~ IMRlevel + cap + sumrival1 + WoverS1 + 
-                        envmids1 + system.members + post.45 
+                        envmids1 + system.members + post.45 +
                         defb.pers + milper + tpop +
                         allyrs + spline1 + spline2 + spline3, 
                       family = binomial(link = "probit"), 

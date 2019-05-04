@@ -47,6 +47,7 @@ dg.poast.risk <- lm(LMILEX ~ defense_dem + defense_nodem + LMILEX1 + DEMOC +
 summary(dg.poast.risk)
 plot(dg.poast.risk)
 
+
 # Robust regression
 dg.poast.risk.rr <- rlm(LMILEX ~ defense_dem + defense_nodem + LMILEX1 + DEMOC +
                       rivalmil + atwar + civilwar + LNRGDP + milcoor +
